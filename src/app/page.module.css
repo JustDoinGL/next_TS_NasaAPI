@@ -1,0 +1,38 @@
+.main__heading {
+    text-align: center;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    display: flex;
+}
+
+.main__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.footer {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: purple; }
+  }
+  
+  .footer__link {
+    animation: rainbow 5s infinite;
+  }

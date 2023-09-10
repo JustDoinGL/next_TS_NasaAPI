@@ -1,0 +1,28 @@
+.icon {
+    width: 48px;
+    height: 48px;
+    fill: silver;
+    transition: transform 0.3s ease, fill 0.3s ease;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .icon:hover {
+        transform: scale(1.2);
+        fill: gold;
+    }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+}
