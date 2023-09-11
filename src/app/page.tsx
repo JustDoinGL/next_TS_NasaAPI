@@ -1,9 +1,9 @@
-import { Footer, Header, MyImage, Navbar } from "@/components";
+import { Footer, Header, Navbar } from "@/components";
 import styles from "./page.module.css";
 import fetchEPIC from "@/actions/fetchEPIC";
 import Slider from "@/components/UI/slider/Slider";
 
-const data = [{ url: "/", text: "EPIC" }];
+const data = [{ url: "/", text: "EPIC" }, { url: "/asteroids", text: "Asteroids" }];
 
 export default async function Home() {
   const { getEPICimg } = fetchEPIC;
@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <>
       <Header>
-        <div className={styles.header__container}>
+        <div className={styles.header}>
           <Navbar el={data} />
         </div>
       </Header>

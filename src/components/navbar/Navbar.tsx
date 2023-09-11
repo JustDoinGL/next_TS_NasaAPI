@@ -12,7 +12,7 @@ const Navbar = ({ el }: NavbarProps) => {
     <div className={styles.nav}>
       {el.map((el) => {
         return (
-          <Link className={pathname === el.url ? styles.nav__link :  styles.nav__link__active}  key={el.url} href={`${el.url}`}>
+          <Link className={pathname !== el.url ? styles.nav__link :  styles.nav__link__active}  key={el.url} href={`${el.url}`}>
             {el.text}
           </Link>
         );

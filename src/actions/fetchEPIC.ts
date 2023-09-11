@@ -12,7 +12,7 @@ const getData = (el: string): string => {
 
 const getEPIC = async (): Promise<TEPIC> => {
     const dataToDay = getData("-")
-    const res = await fetch(`https://api.nasa.gov/EPIC/api/natural/date/${dataToDay}?api_key=${api_key}`, { cache: 'no-store' })
+    const res = await fetch(`https://api.nasa.gov/EPIC/api/natural/date/${dataToDay}?api_key=${api_key}`)
 
     if (!res.ok) {
         throw new Error('Failed to fetch data')
@@ -31,7 +31,7 @@ const getEPICimg = async (): Promise<getEPICimgR> => {
     const data = await getEPIC()
     const arrUrl: string[] = []
 
-    data?.map(el => arrUrl.push(`https://api.nasa.gov/EPIC/archive/natural/${dataToDay}/png/${el.image}.png?api_key=DEMO_KEY`))
+    data?.map(el => arrUrl.push(`https://api.nasa.gov/EPIC/archive/natural/${dataToDay}/png/${el.image}.png?api_key=${api_key}`))
     return {arrUrl, dataToDay}
 }
 
