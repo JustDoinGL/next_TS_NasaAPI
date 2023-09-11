@@ -3,7 +3,9 @@ import styles from "./page.module.css";
 import fetchEPIC from "@/actions/fetchEPIC";
 import Slider from "@/components/UI/slider/Slider";
 
-const data = [{ url: "/", text: "EPIC" }, { url: "/asteroids", text: "Asteroids" }];
+// TODO: { url: "/asteroids", text: "Asteroids" }
+
+const data = [{ url: "/", text: "EPIC" }, { url: "/posts", text: "Posts" }];
 
 export default async function Home() {
   const { getEPICimg } = fetchEPIC;

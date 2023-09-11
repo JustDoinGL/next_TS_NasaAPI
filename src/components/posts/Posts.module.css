@@ -1,0 +1,49 @@
+.post {
+    border: 4px solid silver;
+    padding: 10px;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.post:hover {
+    border: 4px solid gold;
+    color: gold;
+}
+
+
+.post__title {
+    text-align: center;
+    color: silver;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.post__title::first-letter {
+    text-transform: uppercase;
+}
+
+.post__body {
+    color: silver;
+    font-size: 14px;
+    text-indent: 20px;
+}
+
+.post__body::first-letter {
+    text-transform: uppercase;
+}
+
+.post:hover .post__title {
+    color: gold;
+}
+
+.post:hover .post__body {
+    color: gold;
+}
+
+.post__end {
+    padding: 10px;
+    text-align: center;
+    color:  silver;
+    font-size: 20px;
+    border-bottom: 3px solid gold;
+}
