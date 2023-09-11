@@ -1,4 +1,4 @@
-#Project Setup Guide
+##Project Setup Guide
 To start the project, follow these steps:
 
 Open your terminal. 🖥️
