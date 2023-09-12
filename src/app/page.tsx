@@ -2,10 +2,14 @@ import { Footer, Header, Navbar } from "@/components";
 import styles from "./page.module.css";
 import fetchEPIC from "@/actions/fetchEPIC";
 import Slider from "@/components/UI/slider/Slider";
+import { ChangeMode } from "@/components/UI/myToggle/ChangeMode";
 
 // TODO: { url: "/asteroids", text: "Asteroids" }
 
-const data = [{ url: "/", text: "EPIC" }, { url: "/posts", text: "Posts" }];
+const data = [
+  { url: "/", text: "EPIC" },
+  { url: "/posts", text: "Posts" },
+];
 
 export default async function Home() {
   const { getEPICimg } = fetchEPIC;
@@ -16,6 +20,7 @@ export default async function Home() {
       <Header>
         <div className={styles.header}>
           <Navbar el={data} />
+          <ChangeMode />
         </div>
       </Header>
       <main className={styles.main}>
@@ -25,11 +30,7 @@ export default async function Home() {
         </div>
       </main>
 
-      <Footer>
-        <div className={styles.footer}>
-        <a className={styles.footer__link} href="https://github.com/JustDoinGL">Github repository</a>
-        </div>
-      </Footer>
+      <Footer text="Github repository" />
     </>
   );
 }

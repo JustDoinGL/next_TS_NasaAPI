@@ -9,7 +9,7 @@ import styles from "./MyImage.module.css";
 const MyImage = ({ el }: MyImageProps) => {
   return (
     <Link href={`/_next/image?url=${el}&w=640&q=75`}>
-      <div className={styles.container}>
+      <div>
         <Image
         className={styles.img}
           src={el}

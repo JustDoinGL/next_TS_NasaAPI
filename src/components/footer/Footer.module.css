@@ -1,0 +1,53 @@
+.footer {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 16px;
+    border-top: 2px solid gold;
+}
+
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+
+    20% {
+        color: orange;
+    }
+
+    40% {
+        color: yellow;
+    }
+
+    60% {
+        color: green;
+    }
+
+    80% {
+        color: blue;
+    }
+
+    100% {
+        color: purple;
+    }
+}
+
+.footer__link {
+    animation: rainbow 5s infinite;
+    border: 1px solid black;
+}
+
+.footer__link:hover {
+    border-bottom: 1px solid gold;
+}
+
+.footer__linkLight {
+    animation: rainbow 5s infinite;
+    border: 1px solid white;
+}
+
+.footer__linkLight:hover {
+    border-bottom: 1px solid gold;
+}

@@ -1,5 +1,6 @@
 import { Footer, Header, Navbar, Posts } from "@/components";
 import styles from "./page.module.css";
+import { ChangeMode } from "@/components/UI/myToggle/ChangeMode";
 
 // TODO: { url: "/asteroids", text: "Asteroids" }
 
@@ -14,21 +15,14 @@ export default async function Home() {
       <Header>
         <div className={styles.header}>
           <Navbar el={data} />
+          <ChangeMode />
         </div>
+        <div className=""></div>
       </Header>
       <main className={styles.main}>
         <Posts />
       </main>
-      <Footer>
-        <div className={styles.footer}>
-          <a
-            className={styles.footer__link}
-            href="https://github.com/JustDoinGL"
-          >
-            Github repository
-          </a>
-        </div>
-      </Footer>
+      <Footer text="Github repository" />
     </>
   );
 }

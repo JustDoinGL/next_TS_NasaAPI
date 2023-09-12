@@ -1,3 +1,9 @@
+:root {
+  --silver-color: silver;
+  --white-color: white;
+  --black-color: black;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -14,7 +20,7 @@ ol {
   list-style: none;
 }
 
-body {
+.dark {
   background-color: black;
   color: silver;
   min-height: 100vh;
@@ -23,3 +29,23 @@ body {
   overflow-x: hidden;
 }
 
+.light {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.light a {
+  color: black;
+}
+
+.dark a {
+  color: silver;
+}
+
+body {
+  min-height: 100vh;
+}

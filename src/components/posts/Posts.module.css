@@ -13,7 +13,6 @@
 
 .post__title {
     text-align: center;
-    color: silver;
     font-weight: bold;
     font-size: 18px;
 }
@@ -23,7 +22,6 @@
 }
 
 .post__body {
-    color: silver;
     font-size: 14px;
     text-indent: 20px;
 }
@@ -43,7 +41,6 @@
 .post__end {
     padding: 10px;
     text-align: center;
-    color:  silver;
     font-size: 20px;
     border-bottom: 3px solid gold;
 }

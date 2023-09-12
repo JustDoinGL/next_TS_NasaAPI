@@ -2,6 +2,7 @@ import { Footer, Header, Navbar, Post } from "@/components";
 import styles from "./page.module.css";
 import { Metadata, ResolvingMetadata } from "next";
 import fetchPosts from "@/actions/fetchTodo";
+import { ChangeMode } from "@/components/UI/myToggle/ChangeMode";
 
 const data = [{ url: "/posts", text: "Back" }];
 
@@ -24,27 +25,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Home({ params }: Props) {
   const id = params.postId;
 
-  const post = await getPost(id)
+  const post = await getPost(id);
   return (
     <>
       <Header>
         <div className={styles.header}>
           <Navbar el={data} />
+          <ChangeMode />
         </div>
       </Header>
       <main className={styles.main}>
         <Post post={post} />
       </main>
-      <Footer>
-        <div className={styles.footer}>
-          <a
-            className={styles.footer__link}
-            href="https://github.com/JustDoinGL"
-          >
-            Github repository
-          </a>
-        </div>
-      </Footer>
+      <Footer text="Github repository" />
     </>
   );
 }
