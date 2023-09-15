@@ -1,14 +1,17 @@
-import { IAsteroids } from "@/interface/Asteroids"
+import { IAsteroids, IAsteroidsDate } from "@/interface/Asteroids"
 import { api_key } from "./constants"
 
-const getAsteroids = async (data:string): Promise<IAsteroids> => {
-    const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${data}&end_date=${data}&api_key=${api_key}`)
+const getAsteroids = async (date: string): Promise<{ elementCount: number, result: IAsteroidsDate[]}> => {
+    const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&end_date=${date}&api_key=${api_key}`)
 
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }
 
-    return res.json()
+    const data: IAsteroids = await res.json()
+    const elementCount = data.element_count
+    const result = data.near_earth_objects[`${date}`]
+    return { elementCount, result}
 }
 
 // TODO: поменять any и засунуть number

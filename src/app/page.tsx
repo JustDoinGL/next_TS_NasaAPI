@@ -4,11 +4,10 @@ import fetchEPIC from "@/actions/fetchEPIC";
 import Slider from "@/components/UI/slider/Slider";
 import { ChangeMode } from "@/components/UI/myToggle/ChangeMode";
 
-// TODO: { url: "/asteroids", text: "Asteroids" }
-
 const data = [
   { url: "/", text: "EPIC" },
   { url: "/posts", text: "Posts" },
+  { url: "/asteroids", text: "Asteroids" }
 ];
 
 export default async function Home() {

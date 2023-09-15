@@ -11,10 +11,10 @@ export interface IAsteroids {
   }
   
   export interface NearEarthObjects {
-    "2023-09-10": N20230910[]
+    [date: string] : IAsteroidsDate[]
   }
   
-  export interface N20230910 {
+  export interface IAsteroidsDate {
     links: Links2
     id: string
     neo_reference_id: string
@@ -79,4 +79,7 @@ export interface IAsteroids {
     kilometers: string
     miles: string
   }
+  
+  // _______________________________________________
+
   
