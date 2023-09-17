@@ -14,6 +14,8 @@ const Asteroids = ({ activeKilometers }: AsteroidsProps) => {
   const { getAsteroids } = fetchAsteroids;
   const { ref, inView } = useInView();
 
+  // TODO: 11111
+
   const [day, setDay] = useState(0);
   const [asteroids, setAsteroids] = useState<IAsteroidsDate[]>([]);
 // TODO: 1111
