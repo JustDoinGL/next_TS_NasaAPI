@@ -16,7 +16,7 @@ const Asteroids = ({ activeKilometers }: AsteroidsProps) => {
 
   const [day, setDay] = useState(0);
   const [asteroids, setAsteroids] = useState<IAsteroidsDate[]>([]);
-
+// TODO: 1111
   useEffect(() => {
     const fetchData = async () => {
       const dayRight = getCurrentDate(day);
